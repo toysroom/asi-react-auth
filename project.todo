@@ -1,0 +1,42 @@
+CREAZIONE PROGETTO REACT:
+    ✔ vite - npm create vite@latest @done(24-06-13 12:26)
+    ✔ react-router-dom - npm i react-router-dom @done(24-06-13 12:27)
+    ✔ react-hook-form - npm i react-hook-form @done(24-06-13 12:27)
+    ✔ @hookform/devtools - npm i @hookform/devtools -D @done(24-06-13 12:27)
+    ✔ redux-toolkit - npm i react-redux @reduxjs/toolkit @done(24-06-13 12:27)
+    ✔ bootstrap - npm i bootstrap @done(24-06-13 12:28)
+    ✔ axios - npm i axios @done(24-06-13 12:28)
+    ✔ npm i prop-types -D @done(24-06-20 09:41)
+    ✔ npm install jwt-decode @done(24-06-27 10:53)
+    ☐ i18n - ???
+
+STEPS:
+    ✔ ripulire scaffold @done(24-06-13 12:32)
+    ✔ importare bootstrap @done(24-06-13 12:33)
+    ✔ creare componenti RegisterPage, Loginpage, DashboardPage @done(24-06-13 12:37)
+    ✔ creare AppLayout, GuestLayout @done(24-06-13 12:40)
+    ✔ impostare routing (file router.jsx, RouterProvider in main.jsx) @done(24-06-13 12:50)
+    ✔ controllare eslint @done(24-06-27 12:01)
+
+FEATURES:
+    ✔ Context -> theme, @done(24-06-20 12:32)
+    ☐ language
+    ✔ Email e password x login @done(24-06-20 12:32)
+    ✔ backend pocketbase (token jwt, access token) @done(24-06-27 12:01)
+    ☐ risorsa protetta Products 
+    check token fe -> refresh
+
+OPTIONALS:
+    ☐ Typescript
+    ☐ refresh token
+    ☐ react query
+    ☐ react-device-detect
+
+
+    a@a.a"
+password
+: 
+"Pippo1234!"
+passwordConfirm
+: 
+"Pippo1234!"
