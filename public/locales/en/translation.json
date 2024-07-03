@@ -1,0 +1,22 @@
+{
+  "login": {
+    "title": "Login"
+  },
+
+  "register": {
+    "title": "Register"
+  },
+
+  "dashboard": {
+    "title": "Dashboard"
+  },
+
+  "currency": "{{val, currency, USD}}",
+
+  "dates": {
+    "fullDate": "The date is {{ date, short }}",
+    "localisedDate": "In my language, we write a date as: {{ date, long }}",
+    "weekDay": "Today is a {{ date, EEEEEE }}.",
+    "postedOn": "The message was posted {{ date, relative }} (that is {{ date, ago }})."
+  }
+}

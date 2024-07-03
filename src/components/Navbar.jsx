@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useThemeContext } from "../contexts/ThemeContext";
+import Language from './Language';
 
 function Navbar( {user, onLogout} ) {
 
@@ -35,6 +36,8 @@ function Navbar( {user, onLogout} ) {
                     <a className="nav-link disabled" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
+
+                <Language />
 
                 Ciao { user.username }, <button onClick={onLogout}>Esci</button>
 

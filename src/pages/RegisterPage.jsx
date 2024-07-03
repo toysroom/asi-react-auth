@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
+import { useTranslation } from "react-i18next";
 import PocketBase from 'pocketbase';
 import ErrorMessageField from "../components/ErrorMessageField";
 
@@ -9,6 +10,8 @@ const url = 'https://react-auth.pockethost.io/'
 const client = new PocketBase(url)
 
 function RegisterPage() {
+
+    const { t } = useTranslation();
 
     const [response, setResponse] = useState('');
 
@@ -52,7 +55,7 @@ function RegisterPage() {
 
     return (
         <>
-            <h1>RegisterPage</h1>
+            <h1>{ t('register.title') }</h1>
             <form method="post" onSubmit={ handleSubmit(onSubmit) } noValidate>
                 <div className="mb-3">
                     <label htmlFor="username" className="form-label">Username</label>
@@ -105,6 +108,8 @@ function RegisterPage() {
             </div>
 
             <DevTool control={control} />
+
+            <Link to="/login">Login</Link>
         </>
     )
 }

@@ -8,7 +8,8 @@ CREAZIONE PROGETTO REACT:
     ✔ axios - npm i axios @done(24-06-13 12:28)
     ✔ npm i prop-types -D @done(24-06-20 09:41)
     ✔ npm install jwt-decode @done(24-06-27 10:53)
-    ☐ i18n - ???
+    ✔ i18n - npm install react-i18next i18next i18next-http-backend @done(24-07-03 09:29)
+    ✔ npm i date-fns @done(24-07-03 11:21)
 
 STEPS:
     ✔ ripulire scaffold @done(24-06-13 12:32)

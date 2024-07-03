@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import { ThemeContextProvider } from './contexts/ThemeContextProvider.jsx';
 import router from './router.jsx';
 import { store } from './app/store.js';
+import './i18n';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 

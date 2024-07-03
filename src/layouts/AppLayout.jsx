@@ -46,7 +46,9 @@ function AppLayout() {
     return (
         <>
             <Navbar user={user} onLogout={onLogout} />
-            <Outlet />
+            <div className="container">
+                <Outlet />
+            </div>
         </>
     )
 }

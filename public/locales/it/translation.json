@@ -1,0 +1,24 @@
+{
+  "login": {
+    "title": "Accedi"
+  },
+
+  "register": {
+    "title": "Registrati"
+  },
+  
+  "dashboard": {
+    "title": "Bacheca",
+    "users_one": "{{count}} utente presente",
+    "users_other": "{{count}} utenti presenti"
+  },
+
+  "currency": "{{ val, currency, EUR }}",
+
+  "dates": {
+    "fullDate": "The date is {{ date, short }}",
+    "localisedDate": "In my language, we write a date as: {{ date, long }}",
+    "weekDay": "Today is a {{ date, EEEE }}.",
+    "postedOn": "The message was posted {{ date, relative }} (that is {{ date, ago }})."
+  }
+}

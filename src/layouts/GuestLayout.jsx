@@ -1,6 +1,7 @@
 import { Navigate, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getToken } from "../slices/authSlice";
+import Language from "../components/Language";
 
 function GuestLayout() {
 
@@ -16,7 +17,8 @@ function GuestLayout() {
                 {height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'
                 }
             }>     
-                <div style={ { width: '500px' }}>      
+                <div style={ { width: '500px' }}>   
+                    <Language />
                     <Outlet />
                 </div>
             </div> 

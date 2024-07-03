@@ -1,18 +1,16 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { useDispatch } from "react-redux";
-// import PocketBase from 'pocketbase';
+import { useTranslation } from 'react-i18next';
 import ErrorMessageField from "../components/ErrorMessageField";
 import { saveToken } from "../slices/authSlice";
-import axios from "axios";
 import { login } from "../services/httpService";
 
-// const url = 'https://react-auth.pockethost.io/'
-// const client = new PocketBase(url)
-
-
 function LoginPage() {
+
+    const { t } = useTranslation();
 
     const dispatch = useDispatch();
 
@@ -45,7 +43,7 @@ function LoginPage() {
 
     return (
         <>
-            <h1>LoginPage</h1>
+            <h1>{ t('login.title') }</h1>
             <form method="post" onSubmit={ handleSubmit(onSubmit) } noValidate>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
@@ -74,6 +72,8 @@ function LoginPage() {
             </form>
             <ErrorMessageField message={loginError} />
             <DevTool control={control} />
+
+            <Link to="/register">Registrati</Link>
         </>
     )
 }
