@@ -21,23 +21,17 @@ STEPS:
 
 FEATURES:
     ✔ Context -> theme, @done(24-06-20 12:32)
-    ☐ language
+    ✔ language @done(24-07-03 12:25)
     ✔ Email e password x login @done(24-06-20 12:32)
     ✔ backend pocketbase (token jwt, access token) @done(24-06-27 12:01)
     ☐ risorsa protetta Products 
     check token fe -> refresh
 
 OPTIONALS:
-    ☐ Typescript
+    ☐ Typescript (sistemare ts nel theme context)
     ☐ refresh token
     ☐ react query
     ☐ react-device-detect
 
-
-    a@a.a"
-password
-: 
-"Pippo1234!"
-passwordConfirm
-: 
-"Pippo1234!"
+POCKETHOST:
+    a@a.a, Pippo1234!

@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
@@ -7,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import ErrorMessageField from "../components/ErrorMessageField";
 import { saveToken } from "../slices/authSlice";
 import { login } from "../services/httpService";
+import { LoginPayload } from '../models/LoginPayload';
 
 function LoginPage() {
 
@@ -18,20 +20,18 @@ function LoginPage() {
 
     const { register, control, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
-            email: '',
+            identity: '',
             password: '',
         }
     });
 
-    const onSubmit = async (formValues) => {
+    const onSubmit = async (formValues: LoginPayload) => {
         setLoginError('');
         try {
-
-            const payload = {
-                'identity': formValues.email,
+            const payload: LoginPayload = {
+                'identity': formValues.identity,
                 'password': formValues.password,
-            }
-
+            };
             const response = await login(payload, false);
             const authData = response.data;
             dispatch( saveToken( {token: authData.token,} ) );
@@ -46,17 +46,17 @@ function LoginPage() {
             <h1>{ t('login.title') }</h1>
             <form method="post" onSubmit={ handleSubmit(onSubmit) } noValidate>
                 <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email address</label>
+                    <label htmlFor="identity" className="form-label">Email address</label>
                     <input
-                        { ...register('email', {
+                        { ...register('identity', {
                             required: 'Campo email obbligatorio',
                             pattern: {
                                 value: /\S+@\S+\.\S+/,
                                 message: "Campo email non corretto",
                             },
                         }) }
-                        type="email" className="form-control" id="email" />
-                    <ErrorMessageField message={ errors.email?.message } />
+                        type="email" className="form-control" id="identity" />
+                    <ErrorMessageField message={ errors.identity?.message } />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Password</label>

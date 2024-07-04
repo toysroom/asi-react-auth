@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosConfig = axios.create({
-  baseURL: 'https://react-auth.pockethost.io/api/collections',
+  baseURL: import.meta.env.VITE_BASE_URL,
 });
 
 const getHeaders = (withToken) => {

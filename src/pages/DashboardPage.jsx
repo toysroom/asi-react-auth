@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import startOfMonth from "date-fns/startOfMonth";
+import { BrowserView, MobileView } from 'react-device-detect';
+
 
 function DashboardPage() {
 
@@ -11,15 +13,35 @@ function DashboardPage() {
 
     return (
         <>
-            <h1>{ t('dashboard.title') }</h1>
-            <h3>{ t('dashboard.users', {count: users.length} )}</h3>
+            <BrowserView>
+                <ul>
+                    <li>{ t('dashboard.title') }</li>
+                    <li>{ t('dashboard.users', {count: users.length} )}</li>
 
-            <h5>{ t('currency', { val: 2000 }) }</h5>
+                    <li>{ t('currency', { val: 2000 }) }</li>
 
-            <p>{t("dates.fullDate", { date })}</p>
-			<p>{t("dates.localisedDate", { date })}</p>
-			<p>{t("dates.weekDay", { date })}</p>
-			<p>{t("dates.postedOn", { date: startOfMonth(date) })}</p>
+                    <li>{t("dates.fullDate", { date })}</li>
+                    <li>{t("dates.localisedDate", { date })}</li>
+                    <li>{t("dates.weekDay", { date })}</li>
+                    <li>{t("dates.postedOn", { date: startOfMonth(date) })}</li>
+                </ul>
+            </BrowserView>
+
+            <MobileView>
+                <table className="table">
+                    <tbody>
+                    <tr><td>{ t('dashboard.title') }</td></tr>
+                    <tr><td>{ t('dashboard.users', {count: users.length} )}</td></tr>
+
+                    <tr><td>{ t('currency', { val: 2000 }) }</td></tr>
+
+                    <tr><td>{t("dates.fullDate", { date })}</td></tr>
+                    <tr><td>{t("dates.localisedDate", { date })}</td></tr>
+                    <tr><td>{t("dates.weekDay", { date })}</td></tr>
+                    <tr><td>{t("dates.postedOn", { date: startOfMonth(date) })}</td></tr>
+                    </tbody>
+                </table>
+            </MobileView>
         </>
     )
 }

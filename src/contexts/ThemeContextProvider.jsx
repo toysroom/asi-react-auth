@@ -1,14 +1,19 @@
 import { useState, createContext } from "react";
 import PropTypes from 'prop-types';
 
-export const ThemeContext = createContext();
+// type THEME = 'dark' | 'light';
+
+const _THEME_DARK = 'dark';
+const _THEME_LIGHT = 'light';
+
+export const ThemeContext = createContext(_THEME_LIGHT);
 
 export const ThemeContextProvider = ( {children} ) => {
 
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState(_THEME_LIGHT);
 
     const switchTheme = () => {
-        setTheme( (theme === 'light') ? 'dark' : 'light' );
+        setTheme( (theme === _THEME_LIGHT) ? _THEME_DARK : _THEME_LIGHT );
     }
 
     return (

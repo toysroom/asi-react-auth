@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -5,6 +6,7 @@ import { DevTool } from "@hookform/devtools";
 import { useTranslation } from "react-i18next";
 import PocketBase from 'pocketbase';
 import ErrorMessageField from "../components/ErrorMessageField";
+import { RegisterPayload } from '../models/RegisterPayload';
 
 const url = 'https://react-auth.pockethost.io/'
 const client = new PocketBase(url)
@@ -23,7 +25,7 @@ function RegisterPage() {
         }
     });
 
-    const onSubmit = async (formValues) => {
+    const onSubmit = async (formValues: RegisterPayload) => {
 
         try {
             await client.collection('users').create({
@@ -47,10 +49,9 @@ function RegisterPage() {
             });
 
         }
-
-        // const authData = await client.collection('users')
-        //     .authWithPassword('a@a.a', 'Pippo1234!');
     }
+
+
 
 
     return (
